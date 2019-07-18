@@ -19,8 +19,6 @@
     "font-awesome": "^4.7.0",
     "parallax.js": "^1.5.0",
     "page-scroll-to-id": "^1.5.8",
-    //"owl.carousel": "original-owl-carousel#^2.2.1",
     "bootstrap": "^3.3.7"
-    //"waypoints": "^4.0.1"
   }
 }

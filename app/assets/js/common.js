@@ -1,14 +1,3 @@
-jQuery( document ).ready( function() {
-  jQuery('.archive-annotatsii__cell_width_50').each(function(i,e){
-    if (((i+1) % 2) == 0){
-      jQuery(this).css("border-left", "none");
-      jQuery(this).after('<div class="clearfix"></div>');
-    }
-    if ((i+1) != 1 && (i+1) != 2){
-      jQuery(this).css("border-top", "none"); 
-    }
-  });
-});
 jQuery( document ).ready( function () {
   var w = jQuery( document ).width();
   if( w > 768 ){
@@ -38,6 +27,17 @@ jQuery( document ).ready( function() {
     }
   });
   
+});
+jQuery( document ).ready( function() {
+  jQuery('.archive-annotatsii__cell_width_50').each(function(i,e){
+    if (((i+1) % 2) == 0){
+      jQuery(this).css("border-left", "none");
+      jQuery(this).after('<div class="clearfix"></div>');
+    }
+    if ((i+1) != 1 && (i+1) != 2){
+      jQuery(this).css("border-top", "none"); 
+    }
+  });
 });
 jQuery( document ).ready( function() {
 
@@ -396,7 +396,6 @@ jQuery( '.envira-gallery-item' ).click( function () {
 jQuery("body").on("click", '#envirabox-close', function () { 
     jQuery(".envira-share").hide();
 });
-
 jQuery( document ).ready( function() {
   jQuery( '.page-hronologiya__arrow' ).click( function() {
       jQuery(this).next().toggle();
@@ -406,6 +405,7 @@ jQuery( document ).ready( function() {
       jQuery(this).hide();
   });
 });
+
 jQuery( document ).ready( function() {
   jQuery('.page-sovet__cell_width_50').each(function(i,e){
     if (((i+1) % 2) == 0){
@@ -427,22 +427,6 @@ jQuery( document ).ready( function() {
 });
 
 jQuery(document).ready(function(){jQuery(".popup-img").click(function(){jQuery(this).attr("hidden","true")}),jQuery(".popup-open").click(function(){var e=jQuery(this).attr("src");jQuery(".popup-img img").attr("src",e),jQuery(".popup-img").removeAttr("hidden")})});
-jQuery( document ).ready( function() {
-	jQuery( '#program-tit' ).click( function () {
-		jQuery( '#program-link' ).fadeToggle();
-	});
-  jQuery( '#report-tit' ).click( function () {
-		jQuery( '#report-link' ).fadeToggle();
-	}); 
-})
-jQuery( document ).ready( function() {
-	jQuery( '.switcher__box' ).click( function () {
-		jQuery( '.switcher__title' ).toggleClass( 'switcher__title-active' );
-    jQuery( '.page__title_font_italic' ).toggleClass( 'page__title-active_font_italic' );
-    jQuery( '.switcher__link' ).toggleClass( 'switcher__link-active' );
-	}); 
-});
-
 jQuery( document ).ready( function() {
 	jQuery( '.single__review-title' ).click( function () {
 		jQuery( '.single__review-title' ).hide();
@@ -466,3 +450,18 @@ jQuery( '.single__form-close' ).click( function () {
 });
 });
 jQuery(document).ready(function(){jQuery(".single__review-title").click(function(){jQuery(".single__review-title").hide(),jQuery(".single__review").show()}),jQuery(".single__review").click(function(){jQuery(".single__review-title").show(),jQuery(".single__review").hide()}),1==jQuery(".single__review-text").is(":empty")&&(jQuery(".single__review-title").hide(),jQuery(".single__review").hide()),jQuery(".single__button").click(function(){jQuery(".single__form-box").show();var e=jQuery(".single__form-box").offset();window.scrollTo(0,e.top)}),jQuery(".single__form-close").click(function(){jQuery(".single__form-box").hide()})});
+jQuery( document ).ready( function() {
+	jQuery( '#program-tit' ).click( function () {
+		jQuery( '#program-link' ).fadeToggle();
+	});
+  jQuery( '#report-tit' ).click( function () {
+		jQuery( '#report-link' ).fadeToggle();
+	}); 
+})
+jQuery( document ).ready( function() {
+	jQuery( '.switcher__box' ).click( function () {
+		jQuery( '.switcher__title' ).toggleClass( 'switcher__title-active' );
+    jQuery( '.page__title_font_italic' ).toggleClass( 'page__title-active_font_italic' );
+    jQuery( '.switcher__link' ).toggleClass( 'switcher__link-active' );
+	}); 
+});

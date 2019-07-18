@@ -17,19 +17,19 @@
               <div class="row">
                 <div class="col-xs-10 col-sm-6 col-md-4">
                   <div class="logo header__logo"><a href="#"><img src="assets/images/logo/logo.png"></a></div>
+                  <div class="search header__search">
+                    <form class="search__form">
+                      <input class="search__input" name="s" placeholder="Поиск" type="search">
+                      <button class="search__button" type="submit"><img src="assets/images/lupa.png"></button>
+                    </form>
+                  </div>
+                  <div class="header__link"><a href="#">Поиск по произведениям<br>митрополита Антония</a><img src="assets/images/book.png"></div>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-4">
                   <ul class="language header__language">
                     <li><a href="#link1">РУС</a></li>
                     <li><a href="#link2">ENG</a></li>
                   </ul>
-                  <div class="search header__search">
-                    <form class="search__form">
-                      <input class="search__input" name="s" placeholder="Поиск" type="search">
-                      <button class="search__button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                  </div>
-                  <div class="header__link"><a href="#">Поиск по произведениям митрополита Антония</a></div>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4">
                   <div class="header__description">"Никто не может отвернуться от мира и устремиться к вечности, если не увидит в глазах или на лице хоть одного человека сияние вечной жизни."</div>
                 </div>
                 <div class="hidden-xs col-sm-6 col-md-4"></div>
@@ -122,6 +122,8 @@
               </div>
               <div class="col-sm-7 col-md-6">
                 <div class="single__content single-conference__content">
+                  <div class="single-conference__promptly">Первая конференция получила благословение Святейшего Патриарха Московского и всея Руси Алексия, а также митрополита Минского и Слуцкого Филарета, председателя Синодальной богословской комиссии. </div>
+                  <div class="single-conference__line"></div>
                   <h2 class="single-conference__title-link" id="program-tit">ПРОГРАММА И МАТЕРИАЛЫ</h2>
                   <div class="single-conference__text" id="program-link">програма</div>
                   <h2 class="single-conference__title-link" id="report-tit">ОТЗЫВЫ И ОТЧЕТЫ</h2>
@@ -204,6 +206,27 @@
             <div class="social__item"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"> </i></a></div>
             <div class="social__item"><a href="#" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></div>
           </div>
+          <div class="callback" id="callback">
+            <div class="callback__item"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></div>
+          </div>
+          <div class="callback__form" id="modal">
+            <form class="footer__form">
+              <div class="callback__shut" id="modal__shut"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+              <div>
+                <input type="text" placeholder="Ваше имя">
+              </div>
+              <div>
+                <input type="text" placeholder="Ваш e-mail">
+              </div>
+              <div>
+                <textarea placeholder="Ваш вопрос" rows="6"></textarea>
+              </div>
+              <div>
+                <button id="modal__button" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+          <div class="popup-img" hidden="true"><img src=""></div>
         </div>
       </footer>
     </div>
