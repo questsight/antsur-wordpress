@@ -1,0 +1,97 @@
+extends ../layouts/default.pug
+
+block site__content
+  .single.single-conference
+    .container
+      .row
+        .col-sm-12
+          .single-conference__header.text-center.center-block
+            .single_date
+              | 28-30 сентября 2007 г.
+            .single-conference__description
+              | посвященная наследию митрополита Антония Сурожского
+            h1.single-conference__title
+              | I международная конференция,
+            .single-conference__description
+              | посвященная наследию митрополита Антония Сурожского
+        .col-sm-5
+          .single-conference__thumb
+            img(src='assets/images/single/seminar.png')
+        .col-sm-7.col-md-6
+          .single__content.single-conference__content
+            .single-conference__promptly
+              | Первая конференция получила благословение Святейшего Патриарха Московского и всея Руси Алексия, а также митрополита Минского и Слуцкого Филарета, председателя Синодальной богословской комиссии. 
+            .single-conference__line
+            h2.single-conference__title-link#program-tit
+              | ПРОГРАММА И МАТЕРИАЛЫ
+            .single-conference__text#program-link
+              | програма
+            h2.single-conference__title-link#report-tit
+              | ОТЗЫВЫ И ОТЧЕТЫ
+            .single-conference__text#report-link
+              | отчеты
+            h2.single-conference__title-link
+              | ВЫСТАВКИ
+            .single-conference__link
+              p
+                a(href="#") - фотобиография
+              p
+                a(href="#") - письменные свидетельства
+              p
+                a(href="#") - история издания
+            a(href="#")
+              h2.single-conference__title-link
+                | ФОТОГРАФИИ
+            .single-conference__line
+            button.single__button.button_bg_theme Регистрация
+            .single-conference__line
+            .single-conference__text
+              | Первая конференция получила благословение Святейшего Патриарха Московского и всея Руси Алексия, а также митрополита Минского и Слуцкого Филарета, председателя Синодальной богословской комиссии. 
+              | Можно сказать, что эта конференция стала первым действием Фонда. Единой темы для конференции выбрано не было, но ключевым словом в названии стало осмысление наследия владыки. Первый конференционный день был посвящен богословию и пастырству. На второй день прозвучали доклады о том, как наследие митрополита Антония помогает тем, кто занимается психологией, педагогикой, медициной, душепопечением в хосписе. В третий день конференции выступили деятели искусства с докладами о служении митрополита Антония как о значительном явлении и для современного языка и культуры. Как сказал в своем приветствии Виктор Москвин, директор Библиотеки-фонда «Русское Зарубежье» (ныне – Дом русского зарубежья имени Александра Солженицына), цель конференции состояла в том, чтобы совместно сделать первые шаги к решению трех вопросов: «В чем положительно состоит учение митрополита Антония?», «Как это учение реализовалось в жизни и деятельности самого владыки, в чем состояло дело его жизни?» и «Как оно может быть продолжено каждым из нас и нами вместе?». В рамках конференции состоялась также премьера третьей части фильма о митрополите Антонии «Апостол Любви», имеющей подзаголовок «Встречи в России» (режиссер В.И. Матвеева, Санкт-Петербург). Работала выставка фотографий, которые отразили вехи биографии митрополита Антония и лейтмотив всей его жизни: «быть всем для всех». Выставка печатного материала показала путь текстов митрополита Антония к российскому читателю от самиздатских сборников 1960-х годов до двухтомника «Трудов» (М.: Практика, 2002, 2007), последнего на тот момент издания, а также книги на английском языке и многообразие переводов его текстов на многие языки мира. Участники отмечали «удивительную атмосферу любви и братства», царившую на конференции. В конце третьего дня прямо в конференционном зале была отслужена панихида, после которой служивший ее отец Сергий Овсянников и все присутствовавшие не смогли не пропеть стихиры Пасхи.
+        .clearfix  
+        .col-sm-5    
+          .single__footer
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--
+        .single__form-box
+          .single__form
+            .single__form-close &times;
+            p Регистрация на семинар
+            .single__form-name "Название конференции"
+            form
+              br
+              input(placeholder="Имя")
+              br
+              input(placeholder="Фамилия")
+              br
+              input(placeholder="E-mail")
+              br
+              input(placeholder="Номер телефона")
+              br
+              br
+              button.button.button_bg_theme Зерегистрироваться

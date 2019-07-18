@@ -1,0 +1,23 @@
+.header__language
+  margin 20px 0
+  list-style-type none
+  @media only screen and (min-width: navigationBreakPoint)
+    margin 50px 0 20px
+  li
+    display inline-block
+    margin 0 0 0 -20px
+    &:last-child
+      margin 0
+    &:first-child
+      &:after
+        padding 0 4px 0 8px
+        content '|'
+    a
+      font-size xsSize
+      text-decoration underline
+      text-transform uppercase
+      color grayColor
+      font-family titleFont
+      &:hover
+        color darkColor
+        text-decoration underline

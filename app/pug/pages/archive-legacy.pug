@@ -1,0 +1,514 @@
+extends ../layouts/default.pug
+
+block site__content
+  .archive-legacy
+    .archive-legacy__wrapper
+      .archive-legacy__header
+        h1.archive-legacy__title
+          | Весь архив
+      .archive-legacy__content
+        .row
+          .col-sm-6
+            .archive-legacy__switcher.switcher
+              span.switcher__title О митрополите Антонии
+              .switcher__box
+                .switcher__link.switcher__link-left
+                  a(href="#")
+                .switcher__link.switcher__link-right.switcher__link-active
+                  a(href="#")
+              span.switcher__title.switcher__title-active C митрополитом Антонием
+            .archive-legacy__description
+              | Для того, чтобы найти материалы на определенную тему или произвести поиск по датам, месту или жанру, в закладках отметьте интересующие вас параметры.
+              span.archive-legacy__instruction-box
+                .archive-legacy__instruction-question#question1 ?
+                .archive-legacy__instruction#instruction1
+                  | По умолчанию в результатах поиска выдаются все произведения митрополита Антония, имеющиеся в Архиве, в последовательности их размещения на сайте. Если в закладках галочкой отметить один из параметров поиска, т.е. тему, период, место произнесения или жанр, то в результатах поиска появятся произведения, отвечающие этому параметру. Если поставить несколько галочек, то в результатах появятся те произведения, которые отвечают всем отмеченным параметрам. Например, если отметить галочками тему «Исцеление», место «Собор Всех святых и Успения Божией Матери в Лондоне» и жанр «Проповедь», то в результатах будут появятся только проповеди, произнесенные митрополитом Антонием в Соборе, на тему исцеления.
+                  .archive-legacy__instruction-close#close1 &times;
+                  .archive-legacy__instruction-circle
+            .archive-legacy__description
+              form.archive-legacy__form-type#type(method='post')
+                label Искать в
+                input(type="checkbox" value='newest' checked="checked" onchange='this.form.submit()')
+                span
+                  | текстах,
+                input(type="checkbox" value='lastest' checked="checked" onchange='this.form.submit()')
+                span
+                  | аудио,
+                input(type="checkbox" value='title' checked="checked" onchange='this.form.submit()')
+                span
+                  | видео
+                span.archive-legacy__instruction-box
+                  .archive-legacy__instruction-question#question2 ?
+                  .archive-legacy__instruction#instruction2
+                    | По умолчанию против каждого формата материалов (тексты, аудио и видео) стоит галочка, при этом поиск будет производится одновременно по всем форматам. Если вы не хотите получать результаты поиска по какому-то из форматов, уберите соответствующую галочку. Например, если хотите искать только тексты и аудиоматериалы, но не видео, то уберите галочку перед словом «Видео».
+                    .archive-legacy__instruction-close#close2 &times;
+                    .archive-legacy__instruction-circle
+              .text-center
+                button.archive-legacy__button#filter-open
+              .archive-legacy__filter.filter
+                label.filter__button.filter__button-active#button-theme Темы
+                  input(type="radio")
+                label.filter__button#button-place Места
+                  input(type="radio")
+                label.filter__button#button-period Период
+                  input(type="radio")
+                label.filter__button#button-genre Жанр
+                  input(type="radio")
+                .filter__content
+                  input#datepicker.filter__input-date(type='text')
+                  #filter-theme
+                    .filter__border
+                      .row
+                        .col-sm-6
+                          .filter__border_border_right
+                            .filter__box
+                              .filter__title
+                                |Бог
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-presvyataya-troitsa', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Пресвятая Троица
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-hristos', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Христос
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-voploschenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Воплощение
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-svyatoy-duh', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Святой Дух                                                                  
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-bozhiya-mater', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Божия Матерь                               
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-evangelie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Евангелие                                   
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-poslaniya-apostolov', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Послания Апостолов                                                               
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-evangelskie-pritchi', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Евангельские притчи                                  
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='bog-vethiy-zovet', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Ветхий Завет                           
+                            .filter__border_border_bottom
+                            .filter__box
+                              .filter__title
+                                | Человек перед богом
+                              .filter__subtitle
+                                | Человек перед богом - Предание
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-bogosluzhenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Богослужение
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-liturgiya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Литургия
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-tainstva', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Таинства
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-simvol-veryi', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Символ веры
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-traditsiya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Традиция
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-pravoslavie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Православие
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-velikiy-post', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Великий Пост
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-tserkovnyie-prazdniki', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Церковные праздники
+                              .filter__subtitle
+                                | Человек перед богом - Жизнь христианина
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-vera-v-boga', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Вера в Бога
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-molitva', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Молитва
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-somnenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Сомнение
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-ispoved', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Исповедь
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-zastupnichestvo', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Заступничество
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-duhovnaya-zhizn', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Духовная жизнь
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-greh', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Грех
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-bog-lyubov', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Любовь
+                            .filter__border_border_bottom
+                            .filter__box
+                              .filter__title
+                                | Церковь
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-tserkov', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Церковь
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-svyatyie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Святые и святость
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-rol-miryan', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Роль мирян
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-tserkov-i-mir', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Церковь и мир
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-pastyirstvo', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Пастырство
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-hram', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Храм
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='tserkov-drugie-religii', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Другие конфессии и религии
+                        .col-sm-6
+                          .filter__border_border_left
+                            .filter__box
+                              .filter__title
+                                | Человек
+                              .filter__subtitle
+                                | Человек - Дух, душа, тело
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-rol-tela', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Роль тела
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-stradanie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Страдание, боль
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-istselenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Исцеление
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-smert', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Смерть
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-starenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Старение
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-psihicheskie-bolezni', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Психические болезни
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-meditsinskaya-etika', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Медицинская этика
+                              .filter__subtitle
+                                | Человек - Человеческие ценности
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-dostoinstvo', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Достоинство человека
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-solidarnost', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Солидарность
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-tsennosti', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Человеческие ценности
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-distsiplina', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Дисциплина
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-svoboda', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Свобода
+                              .filter__subtitle
+                                | Человек - Призвание христианина
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-prizvanie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Призвание человека
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-vyizov-mira', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Вызов современного мира
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-ateisti', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Диалоги с атеистами
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-brak-semya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Брак и семья
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-deti-roditeli', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Дети и родители
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-muzhchina-zhenschina', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Мужчина и женщина
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='chelovek-molodezh', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Молодежь и подростки
+                            .filter__border_border_bottom
+                            .filter__box
+                              .filter__title
+                                | Мир
+                              .filter__subtitle
+                                | Мир - Творение
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-sotvorenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Сотворение мира
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-grehopadenie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Грехопадение
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-drevo-zhizni', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Древо жизни и древо познания
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-materiya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Тварный мир, материя
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-chudesa', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Чудеса
+                              .filter__subtitle
+                                | Мир - Категория бытия
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-haos', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Хаос, закон
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-krasota', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Красота
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-vremya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Мы и время
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-opyit', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Опыт
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-poznanie', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Познание
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-psihologiya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Психология и религия
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-nauka', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Наука
+                              .filter__subtitle
+                                | Мир - Исторические судьбы
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-avtobiografiya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Автобиография
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-emigratsiya', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Русская эмиграция ХХ века
+                              .filter__one
+                                span.filter__input
+                                  input(type='checkbox', name='genre[]', value='mir-otzyivyi', onchange='this.form.submit()')
+                                span.filter__label
+                                  | Отзывы на актуальные события
+                  #filter-place 
+                    .filter__border_border_none
+                      .row
+                        .col-sm-12
+                          .filter__box
+                            | Фильтр места Раздел в разработке
+                  #filter-period
+                    .filter__border_border_none
+                      .row
+                        .col-sm-12
+                          .filter__box
+                            | Фильтр период Раздел в разработке
+                  #filter-genre 
+                    .filter__border_border_none
+                      .row
+                        .col-sm-12
+                          .filter__box Фильтр жанр
+          .col-sm-6
+            .archive-legacy__search-parameter
+              | Параметры поиска:
+              span.archive-legacy__search-label &nbsp;Тема:&nbsp;
+              span.archive-legacy__search-name Человек, Свобода
+              span.archive-legacy__search-label &nbsp;Место:&nbsp;
+              span.archive-legacy__search-name Лондон
+              span.archive-legacy__search-label &nbsp;Период:&nbsp;
+              span.archive-legacy__search-name 1999-1999
+              span.archive-legacy__search-label &nbsp;Жанр:&nbsp;
+              span.archive-legacy__search-name Проповедь
+              input(type='reset', class='archive-legacy__input-reset', value="Сброс параметров поиска", onchange='this.form.submit()') 
+            .archive-legacy__sorting
+              form#order(method='post')
+                label Сортировать по
+                select(name='select', onchange='this.form.submit()')
+                  option(value='newest') дате (по убыванию)
+                  option(value='lastest') дате (по возрастанию)
+                  option(value='title') по алфавиту        
+            .archive-legacy__one
+              .row
+                .col-sm-3.col-lg-2
+                  .archive-legacy__sort
+                    i.fa.fa-file-text-o(aria-hidden='true')
+                    p Текст
+                .col-sm-9.col-lg-10
+                  a.archive-legacy__name(href="#")
+                    | "Семья, супружество, интимность. Телесность церкви, телесность 
+                  .archive-legacy__description
+                    | Для того, чтобы найти материалы на определенную тему или произвести поиск по датам, месту или жанру, в закладках отметьте интересующие вас параметры.
+                  .archive-legacy__parameter
+                    span &nbsp;Тема:&nbsp;
+                      a(href="#") Чудеса
+                    span &nbsp;Тема:&nbsp;
+                      a(href="#") Чудеса
+                    
+            .archive-legacy__one
+              .row
+                .col-sm-2
+                  .archive-legacy__sort
+                    i.fa.fa-file-audio-o(aria-hidden='true')
+                    p Аудио
+                .col-sm-10
+                  a.archive-legacy__name(href="#")
+                    | "Семья, супружество, интимность. Телесность церкви, телесность 
+                  .archive-legacy__description
+                    | Для того, чтобы найти материалы на определенную тему или произвести поиск по датам, месту или жанру, в закладках отметьте интересующие вас параметры.
+                  .archive-legacy__parameter
+                    span &nbsp;Тема:&nbsp;
+                      a(href="#") Чудеса
+                    span &nbsp;Тема:&nbsp;
+                      a(href="#") Чудеса
+            .archive-legacy__one
+              .row
+                .col-sm-2
+                  .archive-legacy__sort
+                    i.fa.fa-file-video-o(aria-hidden='true')
+                    p Видео
+                .col-sm-10
+                  a.archive-legacy__name(href="#")
+                    | "Семья, супружество, интимность. Телесность церкви, телесность 
+                  .archive-legacy__description
+                    | Для того, чтобы найти материалы на определенную тему или произвести поиск по датам, месту или жанру, в закладках отметьте интересующие вас параметры.
+                  .archive-legacy__parameter
+                    span &nbsp;Тема:&nbsp;
+                      a(href="#") Чудеса
+                    span &nbsp;Тема:&nbsp;
+                      a(href="#") Чудеса

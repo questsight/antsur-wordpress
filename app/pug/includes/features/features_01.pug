@@ -1,0 +1,29 @@
+- var section = 'features_01'
+- var oneLink = 0
+- var oneImageFrameViewClass = 'one__image-frame_view_circle'
+- var oneImageFrameSizeClass = 'one__image-frame_circle_large'
+
+include ../section/section__header.pug
+include ../one/one.pug
+include ../section/section__footer.pug
+
+
+
+section.section(class=section)
+  .container
+    +section__header("Lorem ipsum dolor sit amet", "Proin placerat eros id lorem interdum ornare. In semper nisi sed ornare pulvinar")
+    .section__content(class=section + '__content')
+      .row(class=section + '__clear')
+        .col-sm-4
+          +one("assets/images/section/section_01.jpg", "Lorem ipsum dolor sit amet", "Proin placerat eros id lorem interdum ornare. In semper nisi sed ornare pulvinar")
+        .col-sm-4
+          +one("assets/images/section/section_01.jpg", "заголовок2", "описание2")
+        .col-sm-4
+          +one("assets/images/section/section_01.jpg", "заголовок3", "описание3")
+        .col-sm-4
+          +one("assets/images/section/section_01.jpg", "заголовок4", "описание4")
+        .col-sm-4
+          +one("assets/images/section/section_01.jpg", "заголовок5", "описание5")
+        .col-sm-4
+          +one("assets/images/section/section_01.jpg", "заголовок6", "описание6")
+    +section__footer

@@ -1,0 +1,19 @@
+- var section = 'contact_01'
+- var classButton = 'button_bg_theme'
+
+include ../section/section__header.pug
+include ../section/section__footer.pug
+
+section.section(class=section)
+  .container
+    .row
+      .col-md-6.col-md-push-6
+        +section__header("Lorem ipsum dolor sit amet", "Proin placerat eros id lorem interdum ornare. In semper nisi sed ornare pulvinar")
+        .section__content(class=section + '__content')
+          .row
+            .col-sm-12
+              include ../form/form-1.pug
+        +section__footer      
+      .col-md-6.col-md-pull-6
+        .contact__map
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.174877617547!2d37.59425431616187!3d55.720712980544846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b7308ca9541%3A0x3e559498a5a1ae1d!2z0JvQtdC90LjQvdGB0LrQuNC5INC_0YAuLCAxMNC6NSwg0JzQvtGB0LrQstCwLCAxMTkwNDk!5e0!3m2!1sru!2sru!4v1508317922792', width='100%', height='600', frameborder='0', style='border:0', allowfullscreen)

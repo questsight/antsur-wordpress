@@ -1,0 +1,56 @@
+extends ../layouts/default.pug
+
+block site__content
+  .single
+    .single__wrapper
+      .single__content
+        .single__box-book
+          .row
+            .col-md-3.hidden-sm.hidden-xs
+              .single__thumb-book
+                img(src='assets/images/single/book.png') 
+
+            .col-md-6.col-sm-8
+              .single__ad
+                .single__author-book
+                  | Митрополит Сурожский Антоний
+                .single__title
+                  | «ВОТ Я, ГОСПОДИ! БЕСЕДЫ НА ЕВАНГЕЛЬСКИЕ ТЕМЫ»
+                .single__subtitle
+                  | Пер. с англ. Е. Майданович. – М.: «Практика», 2018. – 144 с. – ISBN 978-5-89816-161-3
+                .single__content
+                  | В сборник вошли 3 отдельные беседы владыки Антония и цикл из 4-х бесед 1993 года «Как молился Христос». Обращены они были в основном к прихожанам лондонского храма Успения Божией Матери и Всех Святых.
+                  | Как все тексты митрополита Антония, эти размышления над евангельским текстом — живое слово, обращенное к каждому лично. Они рассчитаны на медленное, вдумчивое чтение и приглашают читателя по-новому вчитываться в как будто привычные строки Евангелия. Отдельные беседы публиковались в журнале «Альфа и Омега», в виде книги они выходят впервые.
+                  | Рекомендовано к публикации Издательским советом Русской Православной Церкви ИС Р17-712-0450
+                .single__content
+                .single__footer
+                  .single__share
+                    | Поделиться ссылкой
+                    // —— Rambler.Likes script start ——
+                    .rambler-share
+                    script.
+                      (function() {
+                      var init = function() {
+                      RamblerShare.init('.rambler-share', {
+                      "style": {
+                      "buttonHeight": 26
+                      },
+                      "utm": "utm_medium=social",
+                      "counters": true,
+                      "buttons": [
+                      "vkontakte",
+                      "facebook",
+                      "odnoklassniki",
+                      "twitter"
+                      ]
+                      });
+                      };
+                      var script = document.createElement('script');
+                      script.onload = init;
+                      script.async = true;
+                      script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                      document.head.appendChild(script);
+                      })();
+                      // ——   Rambler.Likes script end  —--
+            .col-md-3.col-sm-4.single__info-book
+              | Рекомендовано к публикации Издательским советом Русской Православной Церкви ИС Р17-712-0450

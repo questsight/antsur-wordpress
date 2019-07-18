@@ -1,0 +1,31 @@
+footer.site__footer.footer
+  .footer__wrapper
+    .copyright
+      .copyright__item
+        | &copy; Metropolitan Anthony of Sourozh Foundation
+      .copyright__item
+        | &copy; Фонд "Духовное наследие митрополита Антония Сурожского"
+    .social
+      .social__item
+        a(href='#', target='_blank')
+          i.fa.fa-facebook(aria-hidden='true')  
+      .social__item
+        a(href='#', target='_blank')
+          i.fa.fa-vk(aria-hidden='true')
+    .callback#callback
+      .callback__item
+        i.fa.fa-envelope-o.fa-2x(aria-hidden='true')
+    .callback__form#modal
+      form.footer__form
+        .callback__shut#modal__shut
+          i.fa.fa-times.fa-2x(aria-hidden='true')
+        div
+          input(type='text', placeholder='Ваше имя')
+        div
+          input(type='text', placeholder='Ваш e-mail')
+        div
+          textarea(placeholder='Ваш вопрос', rows='6')
+        div
+          button#modal__button(type='submit') Отправить
+    .popup-img(hidden='true')
+      img(src='')

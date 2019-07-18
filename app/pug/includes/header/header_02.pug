@@ -1,0 +1,39 @@
+header.site__header.header
+  .container-fluid
+    .header__wrapper
+      .header__top
+        .row
+          .col-xs-10.col-sm-6.col-md-4
+            .logo.header__logo
+              a(href='#')
+                img(src='assets/images/logo/logo.png')
+            .search.header__search
+              form.search__form
+                input.search__input(name='s', placeholder='Поиск', type='search')
+                button.search__button(type='submit')
+                  img(src='assets/images/lupa.png')
+            .header__link
+              a(href="#")
+                | Поиск по произведениям
+                br
+                | митрополита Антония
+              img(src='assets/images/book.png')
+          .hidden-xs.hidden-sm.col-md-4
+            ul.language.header__language
+              li
+                a(href='#link1')
+                  | РУС
+              li
+                a(href='#link2')
+                  | ENG
+            .header__description
+              | "Никто не может отвернуться от мира и устремиться к вечности, если не увидит в глазах или на лице хоть одного человека сияние вечной жизни."
+          .hidden-xs.col-sm-6.col-md-4
+          .header__photo.hidden-xs
+            img(src='assets/images/photo/photo.png')
+      .header__hamburger
+        include ../hamburger/hamburger.pug
+      .header__bottom
+        .row
+          .col-sm-12
+            include ../navigation/navigation_03.pug

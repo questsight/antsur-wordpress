@@ -1,0 +1,28 @@
+extends ../layouts/default.pug
+
+block site__content
+  .page
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .page__header.text-center
+            h1.page__title
+              | Lorem ipsum dolor sit amet
+            h2
+                a.page__subtitle.page__subtitle-active#articles-title
+                    | Устав фонда
+                span.page__separator
+                    | |
+                a.page__subtitle#certificate-title
+                    | Свидетельство о регистрации
+          #articles
+            .page__nav
+            .page__cell
+                .page__content.page__box.page__content_text_indent
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at libero ut ex gravida mattis a quis lorem. Proin auctor quam sed turpis accumsan, eget interdum neque mollis. Nulla gravida venenatis ipsum in sollicitudin. Aenean dui urna, consectetur nec felis non, eleifend laoreet nunc. In hac habitasse platea dictumst. Ut blandit, mauris eget semper tristique, nisi lacus malesuada est, ac vestibulum massa sapien a lectus. Integer pellentesque, odio vel posuere posuere, enim metus vestibulum tortor, eu tristique eros nisl a magna. Suspendisse vitae nulla fringilla, eleifend felis a, tincidunt sem. 
+          #certificate
+            .page__nav
+            .page__cell
+                .page__content
+                    img.center-block(src='assets/images/ustav.png')

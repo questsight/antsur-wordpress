@@ -1,0 +1,73 @@
+extends ../layouts/default.pug
+
+block site__content
+  .page.page-activities
+    .page__wrapper
+      .page__cell
+        .page__header
+          h1.page__title.text-center Просвятительская деятельность
+        .page__cell
+          .page__content
+            .row.page-activities__sections
+              .col-md-3.col-sm-6
+                .page-activities__link
+                  a(href="#")
+                    img(src='assets/images/event/event.png')
+                    p Конференции
+              .col-md-3.col-sm-6
+                .page-activities__link
+                  a(href="#")
+                    img(src='assets/images/event/event.png')
+                    p Презентации
+              .col-md-3.col-sm-6
+                .page-activities__link
+                  a(href="#")
+                    img(src='assets/images/event/event.png')
+                    p Семинары
+              .col-md-3.col-sm-6
+                .page-activities__link
+                  a(href="#")
+                    img(src='assets/images/event/event.png')
+                    p Поездки
+            .row
+              .col-md-6
+                .page-bay__info
+                  .page-bay__img
+                    img(src='assets/images/event/event.png')
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at libero ut ex gravida mattis a quis lorem. Proin auctor quam sed turpis accumsan, eget interdum neque mollis. Nulla gravida venenatis ipsum in sollicitudin. Aenean dui urna, consectetur nec felis non, eleifend laoreet nunc. In hac habitasse platea dictumst. Ut blandit, mauris eget semper tristique, nisi lacus malesuada est, ac vestibulum massa sapien a lectus. Integer pellentesque, odio vel posuere posuere, enim metus vestibulum tortor, eu tristique eros nisl a magna. Suspendisse vitae nulla fringilla, eleifend felis a, tincidunt sem. 
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at libero ut ex gravida mattis a quis lorem. Proin auctor quam sed turpis accumsan, eget interdum neque mollis. Nulla gravida venenatis ipsum in sollicitudin. Aenean dui urna, consectetur nec felis non, eleifend laoreet nunc. In hac habitasse platea dictumst. Ut blandit, mauris eget semper tristique, nisi lacus malesuada est, ac vestibulum massa sapien a lectus. Integer pellentesque, odio vel posuere posuere, enim metus vestibulum tortor, eu tristique eros nisl a magna. Suspendisse vitae nulla fringilla, eleifend felis a, tincidunt sem. 
+              .col-md-6
+                .page-bay__box.text-center
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at libero ut ex gravida mattis a quis lorem. Proin auctor quam sed turpis accumsan, eget interdum neque mollis. Nulla gravida venenatis ipsum in sollicitudin. Aenean dui urna, consectetur nec felis non, eleifend laoreet nunc. In hac habitasse platea dictumst. Ut blandit, mauris eget semper tristique, nisi lacus malesuada est, ac vestibulum massa sapien a lectus. Integer pellentesque, odio vel posuere posuere, enim metus vestibulum tortor, eu tristique eros nisl a magna. Suspendisse vitae nulla fringilla, eleifend felis a, tincidunt sem. 
+                
+          .page__footer
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--

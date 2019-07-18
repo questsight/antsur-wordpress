@@ -1,0 +1,61 @@
+extends ../layouts/default.pug
+
+block site__content
+  .page.page-friendes
+    .page__wrapper
+      .page__cell
+        .page__header
+          h1.page__title
+            | О фонде - Друзья фонда
+          .page-friendes__subtitle
+            | Друзья фонда – это те, для кого встреча со словом владыки Антония стала жизненно важной вехой на пути к Богу и Церкви. 
+        .page__cell
+          .page-friendes__content
+            .row
+              .col-sm-6
+                img(src='assets/images/friend1.jpg')
+              .col-sm-4.page-friendes__description
+                | Эта встреча многим из нас помогла увидеть "сияние вечной жизни" и повлияла на наше отношение к молитве, Церкви, миру, окружающим людям и к самим себе. "Прозрачность" владыки помогает нам приблизиться к Живому Богу. Митрополит Антоний стал для нас камертоном, по которому мы можем сверять свою внутреннюю жизнь.
+          .page-friendes__content
+            .row
+              .col-sm-6
+                img(src='assets/images/friend1.jpg')
+              .col-sm-4.page-friendes__text
+                | Эта встреча многим из нас помогла увидеть "сияние вечной жизни" и повлияла на наше отношение к молитве, Церкви, миру, окружающим людям и к самим себе. "Прозрачность" владыки помогает нам приблизиться к Живому Богу. Митрополит Антоний стал для нас камертоном, по которому мы можем сверять свою внутреннюю жизнь.
+          .page-friendes__content
+            .page-friendes__subtitle
+              | Эта встреча многим из нас помогла
+          .page-friendes__content
+            .row
+              .col-sm-6
+                img(src='assets/images/friend1.jpg')
+              .col-sm-4.page-friendes__text
+                | Эта встреча многим из нас помогла увидеть "сияние вечной жизни" и повлияла на наше отношение к молитве, Церкви, миру, окружающим людям и к самим себе. "Прозрачность" владыки помогает нам приблизиться к Живому Богу. Митрополит Антоний стал для нас камертоном, по которому мы можем сверять свою внутреннюю жизнь.
+          .page__footer
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--

@@ -1,0 +1,29 @@
+- var section = 'features_03'
+- var oneLink = 0
+- var oneImageFrameViewClass = 'one__image-frame_view_circle'
+- var oneImageFrameSizeClass = 'one__image-frame_circle_medium'
+
+include ../section/section__header.pug
+include ../one/one.pug
+include ../section/section__footer.pug
+
+
+section.section(class=section)
+  .container
+    .row
+      .col-md-7.col-md-push-5
+        +section__header("Lorem ipsum dolor sit amet", "Proin placerat eros id lorem interdum ornare. In semper nisi sed ornare pulvinar")
+        .section__content(class=section + '__content')
+          .row(class=section + '__clear')
+            .col-sm-6
+              +one("assets/images/section/section_01.jpg", "Lorem ipsum dolor sit amet", "Proin placerat eros id lorem interdum ornare. In semper nisi sed ornare pulvinar")
+            .col-sm-6
+              +one("assets/images/section/section_01.jpg", "заголовок2", "описание2")
+            .col-sm-6
+              +one("assets/images/section/section_01.jpg", "заголовок3", "описание3")
+            .col-sm-6
+              +one("assets/images/section/section_01.jpg", "заголовок4", "описание4")
+        +section__footer
+      .col-md-5.col-md-pull-7
+        .parallax.parallax_view_theme.parallax-window(data-parallax='scroll', data-image-src='assets/images/main/main.jpg')
+          .parallax__overlay_view_theme(class='parallax__overlay__section_' + section)

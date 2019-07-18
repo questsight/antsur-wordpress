@@ -1,0 +1,44 @@
+.current-menu-item
+.current-category-ancestor
+.current-post-ancestor
+.current_page_item
+.current-menu-ancestor
+.current-menu-parent
+  a
+    color themeColor !important
+    font-family titleBoldFont !important
+  ul
+    li
+      a
+        color lightColor !important
+        font-family titleFont !important
+        &:hover
+          font-family titleBoldFont !important
+ul
+  li
+    ul
+      li.current_page_item
+      li.current-menu-item
+      li.current-post-ancestor
+      li.current-category-ancestor
+        a
+          color lightColor !important
+          font-family titleBoldFont !important
+          &:hover
+            font-family titleBoldFont !important
+.current_page_item.current-lang
+  a
+    color darkColor !important
+    text-decoration none !important
+    font-family titleBoldFont !important
+    &:hover
+      color darkColor !important
+      text-decoration none !important
+.current-lang
+  a
+    color darkColor !important
+    text-decoration none !important
+    font-family titleBoldFont !important
+    &:hover
+      color darkColor !important
+      text-decoration none !important          

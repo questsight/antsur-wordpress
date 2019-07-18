@@ -1,0 +1,79 @@
+#envirabox-title-outside
+  text-align center
+  padding-top: 20px
+.page__envira
+  .envira-gallery-wrap .envira-gallery-public .envira-gallery-item-inner
+    border 1px solid socialColor
+    @media only screen and (min-width: 321px)
+      width 37.5vw
+      height 37.5vw
+      position relative
+      overflow hidden
+    @media only screen and (min-width: 460px)
+      width 25vw
+      height 25vw
+    @media only screen and (min-width: sm)
+      width 15vw
+      height 15vw
+    .envira-lazy
+      @media only screen and (min-width: 321px)
+        width 37.5vw
+        height 37.5vw
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        overflow hidden
+      @media only screen and (min-width: 460px)
+        width 25vw
+        height 25vw
+      @media only screen and (min-width: sm)
+        width 15vw
+        height 15vw
+      &:hover .envira-magnifier
+        display block
+  .envira-gallery-wrap .envira-gallery-public .envira-gallery-item
+    position relative
+    overflow hidden
+    @media only screen and (min-width: 321px)
+      height calc(37.5vw + 90px)
+    @media only screen and (min-width: 460px)
+      height calc(25vw + 90px)
+    @media only screen and (min-width: sm)
+      height calc(15vw + 90px)
+  .envira-gallery-wrap .envira-gallery-public .envira-gallery-item img
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    max-width 100%
+    width auto
+    height auto
+    @media only screen and (min-width: 321px)
+      max-height 37.5vw
+    @media only screen and (min-width: 460px)
+      max-height 25vw
+    @media only screen and (min-width: sm)
+      max-height 15vw
+  .envira-name
+    padding 15px 0
+    font-size: xsSize;
+    text-align left
+.envira-magnifier
+  position absolute!important
+  transform translate(-50%,-50%)
+  top 50%
+  left 50%
+  font-size magnifierSize!important
+  z-index 100
+  color lightColor!important
+  display none
+.envira-share
+  display none
+  z-index: 988020
+  position fixed
+  bottom 30px
+  left calc(50% - 80px)
+  .single__share
+    color lightColor
+    text-align center

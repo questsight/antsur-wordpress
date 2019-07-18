@@ -1,0 +1,32 @@
+- var section = 'service'
+- var oneLink = 1
+
+include ../one/one.pug
+
+section.section(class=section)
+  .container
+    .section__header(class=section + '__header')
+      .row
+        .col-sm-12
+          h2.section__title.section__title_view_theme(class=section + '__title')
+            | Lorem ipsum dolor sit amet
+          .section__subtitle.section__subtitle_view_theme(class=section + '__subtitle')
+            | Proin placerat eros id lorem interdum ornare. In semper nisi sed ornare pulvinar
+    .section__content(class=section + '__content')
+      .row
+        .col-sm-4
+          +one
+        .col-sm-4
+          +one
+        .col-sm-4
+          +one
+      .row
+        .col-sm-4
+          +one
+        .col-sm-4
+          +one
+        .col-sm-4
+          +one
+    .section__footer(class=section + '__footer')
+      .row
+        .col-sm-12

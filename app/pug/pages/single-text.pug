@@ -1,0 +1,63 @@
+extends ../layouts/default.pug
+
+block site__content
+  .single
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2.single__box
+          .single__header
+            .single__author Митрополит Сурожский Антоний 
+          h1.single__title
+            | Семья, супружество, интимность
+          .single__description
+            | Из ответов на вопросы В.И.Матвеевой
+          .single__date_color_theme
+            | 8 ноября 1993 г.
+          .single__label
+            | Рубрика: 
+            span
+              a Беседы
+            span
+              | Тема: 
+            span
+              a Беседы
+            span
+              | Место:  
+            span
+              a Беседы
+          .single__content.add-font
+            .single__thumb_float_left
+            p
+              | Когда мы читаем у апостола Павла о том, что такое Церковь, то с удивлением обнаруживаем, что определение Церкви дается в телесных терминах. В Послании к Ефесянам говорится, что двое должны стать одной плотью, и тут же апостол добавляет: «Тайна эта велика, говорю же я применительно ко Христу и Церкви». Каким образом соотносятся телесность наша, телесность Христа и телесность Церкви?
+          .single__footer
+            .single__label
+              | Рубрика: 
+              span
+                a Беседы
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--

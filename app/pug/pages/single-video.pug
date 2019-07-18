@@ -1,0 +1,46 @@
+extends ../layouts/default.pug
+
+block site__content
+  .single
+    .container
+      .row
+        .col-xs-12
+          .single__header
+            h1.single__title
+              | Название видео
+            .single_date
+              | Год
+          .single__content
+            p
+              | Когда мы читаем у апостола Павла о том, что такое Церковь, то с удивлением обнаруживаем, что определение Церкви дается в телесных терминах. В Послании к Ефесянам говорится, что двое должны стать одной плотью, и тут же апостол добавляет: «Тайна эта велика, говорю же я применительно ко Христу и Церкви». Каким образом соотносятся телесность наша, телесность Христа и телесность Церкви?
+          .single__video
+            .thumb-wrap
+              iframe(width='450', height='253', src='https://www.youtube.com/embed/_g7Vr-nT7FA', frameborder='0', allowfullscreen='')
+          .single__footer
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--

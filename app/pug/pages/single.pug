@@ -1,0 +1,87 @@
+extends ../layouts/default.pug
+
+block site__content
+  .single
+    .container
+      .row
+        .col-sm-4
+          .single__thumb
+            img(src='assets/images/single/seminar.png')
+        .col-sm-8.col-md-7
+          .single__header
+            .single_date
+              | 5 декабря 2017г.
+              span &nbsp;в&nbsp;
+              span 19.00
+          .single__content.single__content_width_400
+            p Фонд "Духовное наследие митрополита Антония Сурожского" и Дом русского зарубежья имени Александра Солженицина приглашают на семинра по наследию
+          h1.single__title
+            | Семья, супружество, интимность
+          button.single__button.button_bg_theme Регистрация
+          .single__content
+            p Докладчик: 
+            strong Протоиерей Алексей Уминский — настоятель храма Святой Троицы в Хохлах
+            p
+              | Когда мы читаем у апостола Павла о том, что такое Церковь, то с удивлением обнаруживаем, что определение Церкви дается в телесных терминах. В Послании к Ефесянам говорится, что двое должны стать одной плотью, и тут же апостол добавляет: «Тайна эта велика, говорю же я применительно ко Христу и Церкви». Каким образом соотносятся телесность наша, телесность Христа и телесность Церкви?
+          .single__content
+            span
+              a(href="#") Текст для ознакомления
+            span  (скачать в формате 
+            span
+              a(href="#") docx
+            span .)
+          .single__content
+            p Ведущие: 
+              span.single__content_font_weight_bold Н.В. Ликвинцева и Е.Ю. Садовникова
+          .single__content
+            p адрес: 
+              span ул. Нижняя Радищевская, д.2 (м. «Таганская»-кольцевая).
+            iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Aae580fd3cb2c4ff298d3298c903b89f3fabf87f9545436875b4e66c5e9734760&source=constructor', width='100%', height='400', frameborder='0')
+          .single__content
+            p тел.для справок:
+              span +7(495)915-10-80, +7(903)543-88-19
+          .single__footer
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--
+        .single__form-box
+          .single__form
+            .single__form-close &times;
+            p Регистрация на семинар
+            .single__form-name "Название конференции"
+            form
+              br
+              input(placeholder="Имя")
+              br
+              input(placeholder="Фамилия")
+              br
+              input(placeholder="E-mail")
+              br
+              input(placeholder="Номер телефона")
+              br
+              br
+              button.button.button_bg_theme Зерегистрироваться

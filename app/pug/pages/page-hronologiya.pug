@@ -1,0 +1,59 @@
+extends ../layouts/default.pug
+
+block site__content
+  .page.page-hronologiya
+    .page__wrapper
+      .page__cell
+        .page__header
+          h1.page__title Хронология
+          .page__description
+              | Для того, чтобы найти материалы на определенную тему или произвести поиск по датам, месту или жанру, в закладках отметьте интересующие вас параметры.
+        .page__cell
+          .page-hronologiya__content
+            .row
+              .col-sm-3
+                img(src='assets/images/photo/photo.png')
+              .col-sm-9
+                .page-hronologiya__one
+                  .page-hronologiya__period 1940-1920-е
+                  .page-hronologiya__extract
+                    | Детство, эмиграция, скитания, школа. Встреча со Христом. Участие в скаутском движении, в организации «Витязи», в Русском студенческом христианском движении. Учеба в Лицее Condorcet в Париже.
+                    i.fa.fa-arrow-down.page-hronologiya__arrow(aria-hidden='true')
+                    .page-hronologiya__entirely
+                      | Детство, эмиграция, скитания, школа. Встреча со Христом. Участие в скаутском движении, в организации «Витязи», в Русском студенческом христианском движении. Учеба в Лицее Condorcet в Париже.
+                .page-hronologiya__one
+                  .page-hronologiya__period 1940-1920-е
+                  .page-hronologiya__extract
+                    | Детство, эмиграция, скитания, школа. Встреча со Христом. Участие в скаутском движении, в организации «Витязи», в Русском студенческом христианском движении. Учеба в Лицее Condorcet в Париже.
+                    i.fa.fa-arrow-down.page-hronologiya__arrow(aria-hidden='true')
+                    .page-hronologiya__entirely
+                      | Детство, эмиграция, скитания, школа. Встреча со Христом. 
+                      a(href="#") Участие в скаутском движении, в организации «Витязи», в Русском студенческом христианском движении. Учеба в Лицее Condorcet в Париже.
+          .page__footer
+            .single__share
+              // —— Rambler.Likes script start ——
+              .rambler-share
+              script.
+                (function() {
+                var init = function() {
+                RamblerShare.init('.rambler-share', {
+                "style": {
+                "buttonHeight": 26
+                },
+                "utm": "utm_medium=social",
+                "counters": true,
+                "buttons": [
+                "vkontakte",
+                "facebook",
+                "odnoklassniki",
+                "twitter"
+                ]
+                });
+                };
+                var script = document.createElement('script');
+                script.onload = init;
+                script.async = true;
+                script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                document.head.appendChild(script);
+                })();
+                // ——   Rambler.Likes script end  —--

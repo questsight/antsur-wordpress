@@ -1,0 +1,19 @@
+- var oneImageFrameClass = oneImageFrameViewClass + ' ' + oneImageFrameSizeClass + ' ' + 'one__image-frame_section_' + section
+
+mixin one(image, oneNаme, text)
+  case oneLink
+    when 0
+      .one.one_view_theme(class='one_section_' + section)
+        .one__image-frame.one__image-frame_view_theme(class=oneImageFrameClass)
+          img(src=image, alt=oneNаme)
+        h3.one__name.one__name_view_theme(class='one__name__section_' + section)= oneNаme
+        .one__text.one__text_view_theme(class='one__text_section_' + section)
+          p= text
+    when 1
+      .one.one_view_theme(class='one_section_' + section)
+        a.one__link.one__link_view_theme(href='#', class='one__link_section_' + section)
+          .one__image-frame.one__image-frame_view_theme(class=oneImageFrameClass)
+            img(src=image, alt=oneNаme)
+          h3.one__name.one__name_view_theme(class='one__name__section_' + section)= oneNаme
+          .one__text.one__text_view_theme(class='one__text_section_' + section)
+            p= text
