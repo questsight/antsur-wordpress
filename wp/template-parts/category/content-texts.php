@@ -105,7 +105,8 @@
               <div class="archive-legacy__one">
                 <div class="row">
                   <div class="col-sm-3 col-lg-2">
-                    <div class="archive-legacy__sort">
+                    <div href="<?php echo get_permalink(); ?>" class="archive-legacy__sort">
+                    <a href="<?php echo get_permalink(); ?>">
                     <?php if ( in_category('395')) { ?>
                       <i class="fa fa-file-text-o" aria-hidden="true"></i>
                       <p>Текст</p>
@@ -114,10 +115,10 @@
                       <i class="fa fa-file-text-o" aria-hidden="true"></i>
                       <p>Text</p>
                     <?php } ?>
-                    </div>
+                    </a></div>
                   </div>
                   <div class="col-sm-9 col-lg-10"><a class="archive-legacy__name" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit'); ?>. </a><a class="archive-legacy__date" href="<?php echo get_permalink(); ?>"><?php echo get_field('date'); ?></a>
-                    <div class="archive-legacy__description"><?php the_excerpt(); ?></div>
+                    <div class="archive-legacy__description_size_xs"><?php the_excerpt(); ?></div>
                 </div>
               </div>
             </div>

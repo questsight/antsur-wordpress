@@ -265,6 +265,12 @@ video {
   float: right;
   margin: 10px 0 10px 10px;
 }
+.add-font_font_title {
+  font-family: 'Roboto', sans-serif;
+}
+.add-font_font_title-bold {
+  font-family: 'Roboto Bold', sans-serif;
+}
 .archive {
   padding: 0 15px;
 }
@@ -971,6 +977,13 @@ video {
 .archive-legacy__description p {
   margin: 0;
 }
+.archive-legacy__description {
+  font-size: 14px;
+  position: relative;
+}
+.archive-legacy__description p {
+  margin: 0;
+}
 .archive-legacy__form-type {
   font-size: 18px;
   position: relative;
@@ -1632,6 +1645,9 @@ ul li ul li.current-category-ancestor a:hover {
   .footer__wrapper {
     padding: 0 70px;
   }
+}
+.single__form form .form__acceptance {
+  width: auto;
 }
 .form__group {
   margin-bottom: 15px;

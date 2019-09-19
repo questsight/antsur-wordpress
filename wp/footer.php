@@ -18,9 +18,9 @@
                             <a href="#" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="callback" id="callback">
+                    <!--div class="callback" id="callback">
             <div class="callback__item"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></div>
-          </div>
+          </div-->
           <div class="callback__form" id="modal">
            <div class="footer__form">
            <div class="callback__shut" id="modal__shut"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>

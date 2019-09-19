@@ -36,6 +36,9 @@
   else if(is_page('activities') || is_page('prosvetitelskaya-deyatelnost')){
     get_template_part( 'template-parts/page/content-activities');
   }
+  else if(is_page('politika-v-otnoshenii-obrabotki-personalnyh-dannyh')){
+    get_template_part( 'template-parts/page/content-politika');
+  }
   else if(($post->post_parent == '653') || ($post->post_parent == '31')){
     get_template_part( 'template-parts/page/content-pictures-one');
   }

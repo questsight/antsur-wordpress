@@ -86,6 +86,12 @@
               elseif(is_category('novyie-faktyi')){
                 query_posts('cat=406&posts_per_page=-1');
               }
+              elseif(is_category('outings')){
+                query_posts('cat=181&posts_per_page=-1');
+              }
+              elseif(is_category('poezdki')){
+                query_posts('cat=163&posts_per_page=-1');
+              }
               while (have_posts()) : the_post();?>
               <div class="archive__single">
                 <div class="row">
@@ -155,10 +161,10 @@
               <?php endif; ?>
               <?php
               if(is_category('events')){
-                query_posts('cat=157,179,187,193,412&posts_per_page=-1');
+                query_posts('cat=157,179,187,193,412,183&posts_per_page=-1');
               }
               elseif(is_category('sobyitiya')){
-                query_posts('cat=31,173,161,169,410&posts_per_page=-1');
+                query_posts('cat=31,173,161,169,410,165&posts_per_page=-1');
               }
               elseif(is_category('seminars')){
                 query_posts('cat=157&posts_per_page=-1');
@@ -183,6 +189,12 @@
               }
               elseif(is_category('novyie-faktyi')){
                 query_posts('cat=410&posts_per_page=-1');
+              }
+              elseif(is_category('outings')){
+                query_posts('cat=183&posts_per_page=-1');
+              }
+              elseif(is_category('poezdki')){
+                query_posts('cat=165&posts_per_page=-1');
               }
               while (have_posts()) : the_post();?>
               <div class="archive__single archive__single-past">

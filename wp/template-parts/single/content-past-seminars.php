@@ -5,11 +5,11 @@
         <div class="single__thumb"><img src="<?php echo get_field('img'); ?>"></div>
       </div>
       <div class="col-sm-8 col-md-7">
-        <div class="single__content single__content_width_400">
+        <div class="single__content single__content_width_400"><div class="add-font_font_title">
         <div><?php echo get_field('annotate'); ?></div>
-        <div class="single_date"><?php echo get_field('date'); ?>
-            <span>&nbsp;в&nbsp;</span><span><?php echo get_field('time'); ?></span></div>
-        </div>
+        <div class="single_date"><div class="add-font_font_title-bold"><?php echo get_field('date'); ?>
+          <span>&nbsp;в&nbsp;</span><span><?php echo get_field('time'); ?></span></div></div>
+        </div></div>
         <div class="single__annotate"><?php echo get_field('description'); ?></div>
         <h1 class="single__title">&#171;<?php the_title(); ?>&#187;</h1>
         <div class="single__content">

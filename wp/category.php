@@ -1,13 +1,13 @@
 <?php get_header();
 
 if(is_category('events') || is_category('sobyitiya') || is_category('seminars') || is_category('seminaryi') 
-|| is_category('media') || is_category('smi') || is_category('presentations') || is_category('prezentatsii')  || is_category('novyie-faktyi') || is_category('new-facts')){
+|| is_category('media') || is_category('smi') || is_category('presentations') || is_category('prezentatsii')  || is_category('novyie-faktyi') || is_category('new-facts') || is_category('poezdki') || is_category('outings')){
   get_template_part( 'template-parts/category/content-events' );
 }
-else if(is_category('upcoming-seminars') || is_category('predstoyaschie-seminaryi') || is_category('new-books') || is_category('novyie-knigi') || is_category('upcoming-media') || is_category('predstoyaschie-smi') || is_category('novosti') || is_category('news') || is_category('upcoming-presentations') || is_category('predstoyaschie-prezentatsii')){
+else if(is_category('upcoming-seminars') || is_category('predstoyaschie-seminaryi') || is_category('new-books') || is_category('novyie-knigi') || is_category('upcoming-media') || is_category('predstoyaschie-smi') || is_category('novosti') || is_category('news') || is_category('upcoming-presentations') || is_category('predstoyaschie-prezentatsii') || is_category('upcoming-outings') || is_category('predstoyaschie-poezdki')){
   get_template_part( 'template-parts/category/content-future');
 }
-else if(is_category('past-seminars') || is_category('proshedshie-seminaryi') || is_category('past-media') || is_category('proshedshie-smi') || is_category('past-presentations') || is_category('prezentatsii-proshedshie') || is_category('news-archive') || is_category('arhiv-novostey')){
+else if(is_category('past-seminars') || is_category('proshedshie-seminaryi') || is_category('past-media') || is_category('proshedshie-smi') || is_category('past-presentations') || is_category('prezentatsii-proshedshie') || is_category('news-archive') || is_category('arhiv-novostey') || is_category('past-outings') || is_category('proshedshie-poezdki')){
   get_template_part( 'template-parts/category/content-past');
 }
 else if(is_category('memories') || is_category('vospominaniya')){
