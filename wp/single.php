@@ -35,8 +35,8 @@
     else if(in_category('past-conferences') || in_category('upcoming-conferences') || in_category('predstoyaschie-konferentsii') || in_category('proshedshie-konferentsii')){
         get_template_part( 'template-parts/single/content-conference');
     }
-    else if(in_category('novosti') || in_category('news') || in_category('arhiv-novostey') || in_category('news-archive')){
-        get_template_part( 'template-parts/single/content-facts');
+    else if(in_category('novosti') || in_category('news')){
+        get_template_part( 'template-parts/single/content-news');
     }
     else if(in_category('knigi-online')){
         get_template_part( 'template-parts/single/content-online');

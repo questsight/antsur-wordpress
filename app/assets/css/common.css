@@ -479,12 +479,6 @@ video {
   margin-bottom: 25px;
   min-height: 292.5px;
 }
-.archive__subtitle-fact {
-  font-family: 'Roboto Bold', sans-serif;
-  color: #616264 !important;
-  font-size: 20px;
-  line-height: 1.2;
-}
 .archive__subtitle {
   font-family: 'Roboto Bold', sans-serif;
   padding: 10px 0;
@@ -2114,6 +2108,53 @@ ul li ul li.current-category-ancestor a:hover {
 .main__link {
   text-decoration: none !important;
 }
+.main__news-one {
+  width: 282px;
+  margin: 0 5px 10px;
+  padding: 40px 10px;
+  font-size: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: none;
+  text-decoration: none !important;
+  font-family: 'Roboto', sans-serif;
+}
+.main__news-one_transform_up {
+  text-transform: uppercase;
+  font-family: 'Roboto Bold', sans-serif;
+}
+.main__news-one:nth-child(2n) {
+  background: #8f0047;
+  color: #fff;
+}
+.main__news-one:nth-child(2n+1) {
+  background: #d1d2d2;
+  color: #616264;
+}
+.main__news-one:nth-child(1),
+.main__news-one:nth-child(2),
+.main__news-one:nth-child(3),
+.main__news-one:nth-child(4),
+.main__news-one:nth-child(5) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main__news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .main__one {
   overflow: hidden;
   display: -webkit-box;
@@ -2926,6 +2967,25 @@ ul li ul li.current-category-ancestor a:hover {
   cursor: pointer;
   color: #8f0047;
 }
+.parallax__overlay {
+  padding: 150px 0;
+}
+.parallax__overlay__section_features_03 {
+  padding: 150px 0;
+}
+@media only screen and (min-width: 992px) {
+  .parallax__overlay__section_features_03 {
+    padding: 100% 0;
+  }
+}
+.parallax__overlay__section_features_04 {
+  padding: 150px 0;
+}
+@media only screen and (min-width: 992px) {
+  .parallax__overlay__section_features_04 {
+    padding: 100% 0;
+  }
+}
 .page-sovet {
   margin-top: 20px;
 }
@@ -3029,25 +3089,6 @@ ul li ul li.current-category-ancestor a:hover {
   .page-sovet__wrapper {
     padding: 0;
     margin: 0 20%;
-  }
-}
-.parallax__overlay {
-  padding: 150px 0;
-}
-.parallax__overlay__section_features_03 {
-  padding: 150px 0;
-}
-@media only screen and (min-width: 992px) {
-  .parallax__overlay__section_features_03 {
-    padding: 100% 0;
-  }
-}
-.parallax__overlay__section_features_04 {
-  padding: 150px 0;
-}
-@media only screen and (min-width: 992px) {
-  .parallax__overlay__section_features_04 {
-    padding: 100% 0;
   }
 }
 .mejs-time-total {

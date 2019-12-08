@@ -57,10 +57,10 @@
             <div class="archive__content">
              <?php	
               if(is_category('events')){
-                query_posts('cat=145,147,177,185,195,408&posts_per_page=-1');
+                query_posts('cat=145,147,177,185,195&posts_per_page=-1');
               }
               elseif(is_category('sobyitiya')){
-                query_posts('cat=37,41,171,159,167,406&posts_per_page=-1');
+                query_posts('cat=37,41,171,159,167&posts_per_page=-1');
               }
               elseif(is_category('seminars')){
                 query_posts('cat=145&posts_per_page=-1');
@@ -79,12 +79,6 @@
               }
               elseif(is_category('prezentatsii')){
                 query_posts('cat=167&posts_per_page=-1');
-              }
-              elseif(is_category('new-facts')){
-                query_posts('cat=408&posts_per_page=-1');
-              }
-              elseif(is_category('novyie-faktyi')){
-                query_posts('cat=406&posts_per_page=-1');
               }
               elseif(is_category('outings')){
                 query_posts('cat=181&posts_per_page=-1');
@@ -113,22 +107,7 @@
                       <?php if ( in_category('171') || in_category('195')) { ?>
                       <a class="archive__title" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit'); ?></a>
                      <?php } else { ?>
-                     <?php if ( get_field('new-archive') ) { ?>
-                     <?php $currentlang = get_bloginfo('language');
-                      if($currentlang=="en-US"):?>
-                      <a class="archive__title" href="<?php echo get_permalink(); ?>">Archive news: </a>
-                      <?php else: ?>
-                      <?php $currentlang = get_bloginfo('language');
-                      if($currentlang=="en-US"):?>
-                      <a class="archive__title" href="<?php echo get_permalink(); ?>">Archive news: </a>
-                      <?php else: ?>
-                      <a class="archive__title" href="<?php echo get_permalink(); ?>">Новое в архиве: </a>
-                      <?php endif; ?>
-                      <?php endif; ?>
-                     <a class="archive__subtitle-fact" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit-archive'); ?></a>
-                      <?php } else { ?>
                       <a class="archive__title" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-                     <?php } ?>
                      <?php } ?>
                       <div class="archive__subtitle"><?php echo get_field('description'); ?></div>
                       <div class="archive__preview"><?php echo get_field('preview'); ?><span>&nbsp;</span>
@@ -149,7 +128,6 @@
                 endwhile;
  	            wp_reset_query();
               ?>
-              <?php if(!is_category('novyie-faktyi') && !is_category('new-facts')): ?>
               <div class="button-group text-center">
                 <?php $currentlang = get_bloginfo('language');
                 if($currentlang=="en-US"):?>
@@ -158,13 +136,12 @@
                   <button class="archive__button" id="button-ru"></button>
                 <?php endif; ?>
               </div>
-              <?php endif; ?>
               <?php
               if(is_category('events')){
-                query_posts('cat=157,179,187,193,412,183&posts_per_page=-1');
+                query_posts('cat=157,179,187,193,183&posts_per_page=-1');
               }
               elseif(is_category('sobyitiya')){
-                query_posts('cat=31,173,161,169,410,165&posts_per_page=-1');
+                query_posts('cat=31,173,161,169,165&posts_per_page=-1');
               }
               elseif(is_category('seminars')){
                 query_posts('cat=157&posts_per_page=-1');
@@ -183,12 +160,6 @@
               }
               elseif(is_category('prezentatsii')){
                 query_posts('cat=169&posts_per_page=-1');
-              }
-              elseif(is_category('new-facts')){
-                query_posts('cat=412&posts_per_page=-1');
-              }
-              elseif(is_category('novyie-faktyi')){
-                query_posts('cat=410&posts_per_page=-1');
               }
               elseif(is_category('outings')){
                 query_posts('cat=183&posts_per_page=-1');
@@ -212,12 +183,7 @@
                      <?php if ( in_category('173') || in_category('193')) { ?>
                       <a class="archive__title archive__title-past" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit'); ?></a>
                      <?php } else { ?>
-                     <?php if ( get_field('new-archive') ) { ?>
-                     <a class="archive__title" href="<?php echo get_permalink(); ?>">Новое в архиве: </a>
-                     <a class="archive__subtitle-fact" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit-archive'); ?></a>
-                     <?php } else { ?>
                       <a class="archive__title archive__title-past" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-                     <?php } ?>
                      <?php } ?>
                       <div class="archive__subtitle"><?php echo get_field('description'); ?></div>
                       <div class="archive__preview"><?php echo get_field('preview'); ?><span>&nbsp;</span>

@@ -54,17 +54,7 @@
                       <?php if ( in_category('171') || in_category('195')) { ?>
                       <a class="archive__title archive__title-past" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit'); ?></a>
                      <?php } else { ?>
-                     <?php if ( get_field('new-archive') ) { ?>
-                      <?php $currentlang = get_bloginfo('language');
-                      if($currentlang=="en-US"):?>
-                      <a class="archive__title" href="<?php echo get_permalink(); ?>">Archive news: </a>
-                      <?php else: ?>
-                      <a class="archive__title" href="<?php echo get_permalink(); ?>">Новое в архиве: </a>
-                      <?php endif; ?>
-                     <a class="archive__subtitle-fact" href="<?php echo get_permalink(); ?>"><?php echo get_field('tit-archive'); ?></a>
-                      <?php } else { ?>
                       <a class="archive__title archive__title-past" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-                     <?php } ?>
                      <?php } ?>
                       <div class="archive__subtitle"><?php echo get_field('description'); ?></div>
                       <div class="archive__preview"><?php echo get_field('preview'); ?><span>&nbsp;</span>
