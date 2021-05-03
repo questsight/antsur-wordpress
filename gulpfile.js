@@ -53,9 +53,7 @@ var paths = {
       css: {
         src: [
           './app/vendor/bootstrap/dist/css/bootstrap.min.css',
-          './app/vendor/font-awesome/css/font-awesome.min.css',
-          './app/vendor/owl.carousel/dist/assets/owl.carousel.min.css',
-          './app/vendor/owl.carousel/dist/assets/owl.theme.default.min.css'
+          './app/vendor/font-awesome/css/font-awesome.min.css'
         ],
         dest: './app/libs/css'
       },
@@ -63,8 +61,7 @@ var paths = {
         src: [
           './app/vendor/bootstrap/dist/js/bootstrap.min.js',
           './app/vendor/parallax.js/parallax.min.js',
-          './app/vendor/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
-          './app/vendor/owl.carousel/dist/owl.carousel.min.js'
+          './app/vendor/page-scroll-to-id/jquery.malihu.PageScroll2id.js'
         ],
         dest: './app/libs/js'
       },

@@ -2,7 +2,7 @@ jQuery(document).ready(function () {
   jQuery('#filter-open').click(function () {
     jQuery( '.filter' ).fadeToggle(600);
     jQuery( '.archive-legacy__search-parameter' ).fadeToggle(600);
-    jQuery('#filter-open').toggleClass('archive-legacy__button_content_open')
+    jQuery('#filter-open').toggleClass('archive-legacy__button_content_open');
   });
   jQuery('#filter-en-open').click(function () {
     jQuery( '.filter' ).fadeToggle(600);
@@ -11,11 +11,12 @@ jQuery(document).ready(function () {
   });
   jQuery("#form-en input, #form-en select").change(function(e) {
     var str = jQuery("#form-en").serialize();
+    history.pushState({}, '', '?'+str);
     jQuery("#result-en").html('<div style="text-align:center; padding:30px;"><img src="https://antsur.ru/wp-content/themes/solovki/assets/images/ajax-loader.gif"></div>');
     jQuery.ajax({
         url: 'https://antsur.ru/wp-content/themes/solovki/ajax-en.php',
         data: str,
-        method: 'POST',
+        method: 'GET',
         success: function(data){
           jQuery("#result-en").html(data);
         }
@@ -23,11 +24,12 @@ jQuery(document).ready(function () {
   })
   jQuery("#form-ru input, #form-ru select").change(function(e) {
     var str = jQuery("#form-ru").serialize();
+    history.pushState({}, '', '?'+str);
     jQuery("#result-ru").html('<div style="text-align:center; padding:30px;"><img src="https://antsur.ru/wp-content/themes/solovki/assets/images/ajax-loader.gif"></div>');
     jQuery.ajax({
         url: 'https://antsur.ru/wp-content/themes/solovki/ajax-ru.php',
         data: str,
-        method: 'POST',
+        method: 'GET',
         success: function(data){
           jQuery("#result-ru").html(data);
         }

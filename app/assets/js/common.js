@@ -29,17 +29,6 @@ jQuery( document ).ready( function() {
   
 });
 jQuery( document ).ready( function() {
-  jQuery('.archive-annotatsii__cell_width_50').each(function(i,e){
-    if (((i+1) % 2) == 0){
-      jQuery(this).css("border-left", "none");
-      jQuery(this).after('<div class="clearfix"></div>');
-    }
-    if ((i+1) != 1 && (i+1) != 2){
-      jQuery(this).css("border-top", "none"); 
-    }
-  });
-});
-jQuery( document ).ready( function() {
 
   jQuery( '#button-authors' ).click( function() {
     jQuery("#button-authors").hide();
@@ -60,6 +49,17 @@ jQuery( document ).ready( function() {
 
 });
 
+jQuery( document ).ready( function() {
+  jQuery('.archive-annotatsii__cell_width_50').each(function(i,e){
+    if (((i+1) % 2) == 0){
+      jQuery(this).css("border-left", "none");
+      jQuery(this).after('<div class="clearfix"></div>');
+    }
+    if ((i+1) != 1 && (i+1) != 2){
+      jQuery(this).css("border-top", "none"); 
+    }
+  });
+});
 jQuery(document).ready(function () {
   jQuery('#close1').click(function () {
     jQuery( '#instruction1' ).hide();
@@ -93,12 +93,11 @@ jQuery( document ).ready( function() {
   }
 });*/
 
-
 jQuery(document).ready(function () {
   jQuery('#filter-open').click(function () {
     jQuery( '.filter' ).fadeToggle(600);
     jQuery( '.archive-legacy__search-parameter' ).fadeToggle(600);
-    jQuery('#filter-open').toggleClass('archive-legacy__button_content_open')
+    jQuery('#filter-open').toggleClass('archive-legacy__button_content_open');
   });
   jQuery('#filter-en-open').click(function () {
     jQuery( '.filter' ).fadeToggle(600);
@@ -107,11 +106,12 @@ jQuery(document).ready(function () {
   });
   jQuery("#form-en input, #form-en select").change(function(e) {
     var str = jQuery("#form-en").serialize();
+    history.pushState({}, '', '?'+str);
     jQuery("#result-en").html('<div style="text-align:center; padding:30px;"><img src="https://antsur.ru/wp-content/themes/solovki/assets/images/ajax-loader.gif"></div>');
     jQuery.ajax({
         url: 'https://antsur.ru/wp-content/themes/solovki/ajax-en.php',
         data: str,
-        method: 'POST',
+        method: 'GET',
         success: function(data){
           jQuery("#result-en").html(data);
         }
@@ -119,11 +119,12 @@ jQuery(document).ready(function () {
   })
   jQuery("#form-ru input, #form-ru select").change(function(e) {
     var str = jQuery("#form-ru").serialize();
+    history.pushState({}, '', '?'+str);
     jQuery("#result-ru").html('<div style="text-align:center; padding:30px;"><img src="https://antsur.ru/wp-content/themes/solovki/assets/images/ajax-loader.gif"></div>');
     jQuery.ajax({
         url: 'https://antsur.ru/wp-content/themes/solovki/ajax-ru.php',
         data: str,
-        method: 'POST',
+        method: 'GET',
         success: function(data){
           jQuery("#result-ru").html(data);
         }
@@ -239,7 +240,6 @@ jQuery(document).ready(function () {
   
 });
 
-jQuery(document).ready(function(){jQuery("#filter-open").click(function(){jQuery(".filter").fadeToggle(600),jQuery(".archive-legacy__search-parameter").fadeToggle(600),jQuery("#filter-open").toggleClass("archive-legacy__button_content_open")}),jQuery("#filter-en-open").click(function(){jQuery(".filter").fadeToggle(600),jQuery(".archive-legacy__search-parameter").fadeToggle(600),jQuery("#filter-en-open").toggleClass("archive-legacy__button-en_content_open")}),jQuery("#form-en input, #form-en select").change(function(){var r=jQuery("#form-en").serialize();jQuery("#result-en").html('<div style="text-align:center; padding:30px;"><img src="https://antsur.ru/wp-content/themes/solovki/assets/images/ajax-loader.gif"></div>'),jQuery.ajax({url:"https://antsur.ru/wp-content/themes/solovki/ajax-en.php",data:r,method:"POST",success:function(e){jQuery("#result-en").html(e)}})}),jQuery("#form-ru input, #form-ru select").change(function(){var r=jQuery("#form-ru").serialize();jQuery("#result-ru").html('<div style="text-align:center; padding:30px;"><img src="https://antsur.ru/wp-content/themes/solovki/assets/images/ajax-loader.gif"></div>'),jQuery.ajax({url:"https://antsur.ru/wp-content/themes/solovki/ajax-ru.php",data:r,method:"POST",success:function(e){jQuery("#result-ru").html(e)}})}),jQuery("#button-theme").click(function(){jQuery("#filter-theme").removeClass("filter__hidden"),jQuery("#button-theme").addClass("filter__button-active"),jQuery("#filter-place").addClass("filter__hidden"),jQuery("#button-place").removeClass("filter__button-active"),jQuery("#filter-period").addClass("filter__hidden"),jQuery("#button-period").removeClass("filter__button-active"),jQuery("#filter-genre").addClass("filter__hidden"),jQuery("#button-genre").removeClass("filter__button-active")}),jQuery("#button-place").click(function(){jQuery("#filter-theme").addClass("filter__hidden"),jQuery("#button-theme").removeClass("filter__button-active"),jQuery("#filter-place").removeClass("filter__hidden"),jQuery("#button-place").addClass("filter__button-active"),jQuery("#filter-period").addClass("filter__hidden"),jQuery("#button-period").removeClass("filter__button-active"),jQuery("#filter-genre").addClass("filter__hidden"),jQuery("#button-genre").removeClass("filter__button-active")}),jQuery("#button-period").click(function(){jQuery("#filter-theme").addClass("filter__hidden"),jQuery("#button-theme").removeClass("filter__button-active"),jQuery("#filter-place").addClass("filter__hidden"),jQuery("#button-place").removeClass("filter__button-active"),jQuery("#filter-period").removeClass("filter__hidden"),jQuery("#button-period").addClass("filter__button-active"),jQuery("#filter-genre").addClass("filter__hidden"),jQuery("#button-genre").removeClass("filter__button-active")}),jQuery("#button-genre").click(function(){jQuery("#filter-theme").addClass("filter__hidden"),jQuery("#button-theme").removeClass("filter__button-active"),jQuery("#filter-place").addClass("filter__hidden"),jQuery("#button-place").removeClass("filter__button-active"),jQuery("#filter-period").addClass("filter__hidden"),jQuery("#button-period").removeClass("filter__button-active"),jQuery("#filter-genre").removeClass("filter__hidden"),jQuery("#button-genre").addClass("filter__button-active")});var e=0,r=10,t=0,a=1,i=2,u=jQuery("#sum").attr("sum");jQuery(".archive__one").slice(e,r).show(),jQuery(".archive-legacy__page-numbers[page="+a+"]").addClass("archive-legacy__page-numbers-activa"),jQuery(".archive-legacy__page-numbers[page="+a+"]").show(),jQuery(".archive-legacy__page-numbers[page="+i+"]").show(),jQuery(".archive-legacy__page-numbers[page="+u+"]").show(),jQuery(".dots[dots="+i+"]").show(),jQuery(".archive-legacy__page-numbers[page='next']").show(),jQuery(".archive-legacy__page-numbers").click(function(){jQuery(".archive-legacy__page-numbers").removeClass("archive-legacy__page-numbers-activa");var s=jQuery(this).attr("page");"prev"==s?(e-=10,r-=10,t=parseInt(jQuery(this).attr("link"))-1,a=parseInt(jQuery(this).attr("link")),i=parseInt(jQuery(this).attr("link"))+1):"next"==s?(e+=10,r+=10,t=parseInt(jQuery(this).attr("link"))-1,a=parseInt(jQuery(this).attr("link")),i=parseInt(jQuery(this).attr("link"))+1):(e=10*(s-1),r=10*s,t=parseInt(s)-1,a=parseInt(s),i=parseInt(s)+1),jQuery(".archive-legacy__page-numbers").hide(),jQuery(".archive-legacy__page-numbers[page="+t+"]").show(),jQuery(".archive-legacy__page-numbers[page="+a+"]").show(),jQuery(".archive-legacy__page-numbers[page="+i+"]").show(),jQuery(".archive-legacy__page-numbers[page="+u+"]").show(),1!=a&&jQuery(".archive-legacy__page-numbers[page='prev']").show(),a!=u&&jQuery(".archive-legacy__page-numbers[page='next']").show(),jQuery(".dots").hide(),u-1>i&&jQuery(".dots[dots="+i+"]").show(),t>2&&jQuery(".dots[dots='1']").show(),jQuery(".archive-legacy__page-numbers[page='1']").show(),jQuery(".archive-legacy__page-numbers[page="+a+"]").addClass("archive-legacy__page-numbers-activa"),jQuery(".archive__one").hide(),jQuery(".archive__one").slice(e,r).show(),setTimeout(function(){jQuery(".archive-legacy__page-numbers[page='prev']").attr("link",t),jQuery(".archive-legacy__page-numbers[page='next']").attr("link",i)},0)})});
 jQuery( document ).ready( function() {
 	jQuery( '#hamburger' ).click( function () {
 		jQuery( '.hamburger__item' ).toggleClass( 'hamburger__item_open' );
@@ -398,12 +398,27 @@ jQuery("body").on("click", '#envirabox-close', function () {
 });
 jQuery( document ).ready( function() {
   jQuery( '.page-hronologiya__arrow' ).click( function() {
-      jQuery(this).next().toggle();
+      jQuery(this).parent().parent().children('.page-hronologiya__entirely').toggle();
       jQuery(this).toggleClass("page-hronologiya__arrow_transform_190");
+      jQuery(this).parent().children('.page-hronologiya__instruction').toggleClass("open");
   });
   jQuery( '.page-hronologiya__entirely' ).click( function() {
       jQuery(this).hide();
-  });
+      jQuery(this).parent().children('.page-hronologiya__instruction-box').children('.page-hronologiya__arrow').removeClass("page-hronologiya__arrow_transform_190");
+      jQuery(this).parent().children('.page-hronologiya__instruction-box').children('.page-hronologiya__instruction').removeClass("open");
+  });  
+  jQuery('.page-hronologiya__instruction-box').hover(
+    function(){
+      var pos = jQuery(window).width() - jQuery(this).offset().left;
+      if(pos < 200){
+        pos = 40 - pos;
+        jQuery(this).children('.page-hronologiya__instruction').css("right", pos);
+      }
+      jQuery(this).children('.page-hronologiya__instruction').show();
+    },
+    function(){
+      jQuery(this).children('.page-hronologiya__instruction').hide();
+    });
 });
 
 jQuery( document ).ready( function() {
@@ -426,7 +441,6 @@ jQuery( document ).ready( function() {
   });
 });
 
-jQuery(document).ready(function(){jQuery(".popup-img").click(function(){jQuery(this).attr("hidden","true")}),jQuery(".popup-open").click(function(){var e=jQuery(this).attr("src");jQuery(".popup-img img").attr("src",e),jQuery(".popup-img").removeAttr("hidden")})});
 jQuery( document ).ready( function() {
 	jQuery( '.single__review-title' ).click( function () {
 		jQuery( '.single__review-title' ).hide();
@@ -449,7 +463,6 @@ jQuery( '.single__form-close' ).click( function () {
   jQuery( '.single__form-box' ).hide();
 });
 });
-jQuery(document).ready(function(){jQuery(".single__review-title").click(function(){jQuery(".single__review-title").hide(),jQuery(".single__review").show()}),jQuery(".single__review").click(function(){jQuery(".single__review-title").show(),jQuery(".single__review").hide()}),1==jQuery(".single__review-text").is(":empty")&&(jQuery(".single__review-title").hide(),jQuery(".single__review").hide()),jQuery(".single__button").click(function(){jQuery(".single__form-box").show();var e=jQuery(".single__form-box").offset();window.scrollTo(0,e.top)}),jQuery(".single__form-close").click(function(){jQuery(".single__form-box").hide()})});
 jQuery( document ).ready( function() {
 	jQuery( '#program-tit' ).click( function () {
 		jQuery( '#program-link' ).fadeToggle();
