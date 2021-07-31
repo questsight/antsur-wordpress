@@ -84,15 +84,6 @@ jQuery( document ).ready( function() {
     jQuery( '#modal' ).fadeOut( 600 );
   });
 });
-/*jQuery( document ).ready(function() {
-  if(jQuery('#datepicker').length){
-    jQuery('#datepicker').datepicker({dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'], monthNamesShort: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],dateFormat: 'dd.mm.yy',changeMonth: true,changeYear: true,yearRange:'1941:2003',altField: "#actual-date",altFormat: "yy-mm-dd"});
-  }
-  if(jQuery('#datepicker-en').length){
-   jQuery('#datepicker-en').datepicker({dateFormat: 'dd.mm.yy',changeMonth: true,changeYear: true,yearRange:'1941:2003',altField: "#actual-date",altFormat: "yy-mm-dd"}); 
-  }
-});*/
-
 jQuery(document).ready(function () {
   jQuery('#filter-open').click(function () {
     jQuery( '.filter' ).fadeToggle(600);
@@ -239,6 +230,15 @@ jQuery(document).ready(function () {
   
   
 });
+
+/*jQuery( document ).ready(function() {
+  if(jQuery('#datepicker').length){
+    jQuery('#datepicker').datepicker({dayNamesMin: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'], monthNamesShort: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],dateFormat: 'dd.mm.yy',changeMonth: true,changeYear: true,yearRange:'1941:2003',altField: "#actual-date",altFormat: "yy-mm-dd"});
+  }
+  if(jQuery('#datepicker-en').length){
+   jQuery('#datepicker-en').datepicker({dateFormat: 'dd.mm.yy',changeMonth: true,changeYear: true,yearRange:'1941:2003',altField: "#actual-date",altFormat: "yy-mm-dd"}); 
+  }
+});*/
 
 jQuery( document ).ready( function() {
 	jQuery( '#hamburger' ).click( function () {
@@ -464,6 +464,14 @@ jQuery( '.single__form-close' ).click( function () {
 });
 });
 jQuery( document ).ready( function() {
+	jQuery( '.switcher__box' ).click( function () {
+		jQuery( '.switcher__title' ).toggleClass( 'switcher__title-active' );
+    jQuery( '.page__title_font_italic' ).toggleClass( 'page__title-active_font_italic' );
+    jQuery( '.switcher__link' ).toggleClass( 'switcher__link-active' );
+	}); 
+});
+
+jQuery( document ).ready( function() {
 	jQuery( '#program-tit' ).click( function () {
 		jQuery( '#program-link' ).fadeToggle();
 	});
@@ -471,10 +479,3 @@ jQuery( document ).ready( function() {
 		jQuery( '#report-link' ).fadeToggle();
 	}); 
 })
-jQuery( document ).ready( function() {
-	jQuery( '.switcher__box' ).click( function () {
-		jQuery( '.switcher__title' ).toggleClass( 'switcher__title-active' );
-    jQuery( '.page__title_font_italic' ).toggleClass( 'page__title-active_font_italic' );
-    jQuery( '.switcher__link' ).toggleClass( 'switcher__link-active' );
-	}); 
-});

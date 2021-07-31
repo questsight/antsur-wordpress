@@ -11,10 +11,7 @@
                 </div>
                 <?php else: ?>
                 <div class="archive-legacy__switcher switcher"><span class="page__title">Как помочь - </span><span class="page__title_font_italic page__title-active_font_italic">Делами </span>
-                  <div class="switcher__box">
-                    <a href="<?php echo get_page_link('75');?>"><div class="switcher__link switcher__link-left switcher__link-active"></div></a>
-                    <a href="<?php the_permalink('1704');?>"><div class="switcher__link switcher__link-right"></div></a>
-                  </div><span class="page__title_font_italic">Деньгами</span>
+                  <div class="page__title_font_italic"><a href="<?php echo get_page_link('1704');?>">Деньгами &rarr;</a></div>
                 </div>
                 <?php endif; ?>  
                 <div class="page-friendes__subtitle"><?php echo get_field('subtitle'); ?></div>

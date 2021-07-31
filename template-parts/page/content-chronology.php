@@ -11,7 +11,7 @@
                     <div class="col-sm-3"><?php the_post_thumbnail( array() ); ?></div>
                     <div class="col-sm-9">
                       <div class="page-hronologiya__one">
-                        <div class="page-hronologiya__period">1940-1920-е</div>
+                        <div class="page-hronologiya__period">1914-1920-е</div>
                         <div class="page-hronologiya__extract"><?php
                           $text = get_field('1914-1929-extract'); $text = str_replace("<p>", "", $text); $text = str_replace("</p>", "", $text); echo $text; ?>
                           <span class="page-hronologiya__instruction-box"><i class="fa fa-arrow-down page-hronologiya__arrow" aria-hidden="true"></i>

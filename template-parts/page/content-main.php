@@ -79,3 +79,8 @@
       </div>
     </div>
 </div>
+<?php $currentlang = get_bloginfo('language'); if($currentlang=="en-US"):?>
+<a href="<?php echo get_page_link('1704');?>" class="main__help">How to<br>help us</a>
+<?php else:?>
+<a href="<?php echo get_page_link('1704');?>" class="main__help">Как помочь<br>работе Фонда</a>
+<?php endif;?>
